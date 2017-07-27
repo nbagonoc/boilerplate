@@ -1,0 +1,123 @@
+@mixin featured{
+	padding: 100px 0;
+	border-top: 1px solid $light;
+	.elementInner{
+		border: 1px solid $light;
+	}
+	.element{
+		margin: 1%;
+		float: left;
+	}
+	.elementText{
+		padding: 20px;
+	}
+	h3{
+		text-align: center;
+		font-size: $titleSize;
+	}
+}
+
+@mixin mobileMenu{
+	.open {
+		height: auto;
+	}
+	header{
+		background-color: $lightGray;
+		.container{
+			width: 100%;
+		}
+		.mobileHeader{
+			width: 100%;
+			overflow: hidden;
+		}
+		.logo{
+			position: relative;
+			text-decoration: none;
+			text-align: left;
+			display: initial;
+			padding: 20px;
+			color: $gray;
+			font-weight: bold;
+			float: left;
+		}
+		.mobileMenu{
+			position: relative;
+			text-decoration: none;
+			text-align: right;
+			display: initial;
+			padding: 15px 20px;
+			font-weight: bold;
+			float: right;
+		}
+		nav {
+			width: 100%;
+			background-color: #eee;
+			float: left;
+			height: 0;
+			a {
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				padding: 15px 20px;
+				color: $gray;
+				font-weight: bold;
+			}
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			float: none;
+
+		}
+		li {
+			float: none;
+			list-style: none;
+			border-bottom: 1px solid $lightGray;
+		}
+	}
+}
+
+@mixin menu {
+		header{
+			background-color: $lightGray;
+			overflow: hidden;
+		.logo{
+			position: absolute;
+			text-decoration: none;
+			text-align: center;
+			display: block;
+			padding: 15px 20px;
+			color: $gray;
+			font-weight: bold;
+			&:hover{
+				color: $light;
+			}
+		}
+		nav {
+			height: auto;
+			float: none;
+			a {
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				padding: 15px 20px;
+				color: $gray;
+				font-weight: bold;
+				&:hover{
+					background-color: darken($lightGray, 10);
+					color: $darkGray;
+				}
+			}
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			float: right;
+
+		}
+		li {
+			float: left;
+			list-style: none;
+		}
+	}
+}

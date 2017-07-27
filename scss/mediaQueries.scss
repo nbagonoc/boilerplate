@@ -1,0 +1,120 @@
+/*extra small*/
+@media(max-width:767px){
+	@include mobileMenu;
+	.banner {
+		height: 350px;
+		.bannerText{
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.container{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.featuredBlog{
+		.element{
+			width: 99%;
+		}
+	}
+
+	.featuredService{
+		.element{
+			width: 99%;
+		}
+	}
+}
+
+/*small*/
+@media(min-width:768px){
+	@include mobileMenu;
+	.banner {
+		height: 450px;
+		.bannerText{
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	.container{
+		width: 720px;
+		margin: 0 auto;
+	}
+	.featuredBlog{
+		.element{
+			width: (96%/2);
+		}
+	}
+
+	.featuredService{
+		.element{
+			width: 99%;
+		}
+	}
+}
+
+/*medium*/
+@media(min-width:992px){
+	@include menu;
+	header .container {
+		width: 940px !important;
+	}
+	.mobileMenu{
+		display: none !important;
+	}
+	.banner {
+		height: 450px;
+		.bannerText{
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+	.container{
+		width: 940px;
+		margin: 0 auto;
+	}
+	.featuredBlog{
+		.element{
+			width: (96%/2);
+		}
+	}
+
+	.featuredService{
+		.element{
+			width: (94%/3);
+		}
+	}
+}
+
+/*large*/
+@media(min-width:1200px){
+	@include menu;
+	header .container {
+		width: 1170px !important;
+	}
+	.mobileMenu{
+		display: none !important;
+	}
+	.banner {
+		height: 450px;
+		.bannerText{
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+	.container{
+		width: 1170px;
+		margin: 0 auto;
+	}
+	.featuredBlog{
+		.element{
+			width: (92%/4);
+		}
+	}
+
+	.featuredService{
+		.element{
+			width: (94%/3);
+		}
+	}
+
+}

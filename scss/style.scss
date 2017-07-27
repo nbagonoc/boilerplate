@@ -1,0 +1,87 @@
+@import 'variables';
+@import 'mixins';
+
+
+html, body {
+	margin: 0 auto;
+	font-family: $bodyFont;
+	font-size: $bodySize;
+	color: $gray;
+}
+
+h1, h2, h3, header {
+	font-family: $headingFont;
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: 100%;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.row {
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+}
+
+@include menu;
+
+.banner{
+	//background: url("http://via.placeholder.com/1980x1080") center center;
+	background-color: $light;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	h1{
+		text-align: center;
+		font-size: $headingSize;
+	}
+	h2{
+		text-align: center;
+		font-size: $subHeadingSize;
+	}
+}
+
+/*vertical align with hight being % specified. May have problems with ie7*/
+.verticalAlign {
+    display: table; /*no work around with ie7*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.verticalAlignElement{
+    display: table-cell; /*no work around with ie7*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+.featuredBlog {
+	@include featured;
+}
+
+.featuredService {
+	border-top: none !important;
+	@include featured;
+}
+
+footer{
+	width: 100%;
+	background-color: $lightGray;
+	padding: 20px 0;
+	overflow: hidden;
+	p{
+		padding: 0;
+		margin: 0;
+		float: right;
+	}
+}
+
+@import 'mediaQueries';
